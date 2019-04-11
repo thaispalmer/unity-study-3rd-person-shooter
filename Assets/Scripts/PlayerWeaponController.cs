@@ -8,17 +8,12 @@ public class PlayerWeaponController : MonoBehaviour
     public Transform bulletSpawn;
     public float bulletSpeed = 30;
     public float lifeSpan = 3;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string buttonTrigger = "Fire1";
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown(buttonTrigger))
         {
             Fire();
         }

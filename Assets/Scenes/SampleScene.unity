@@ -390,6 +390,7 @@ MonoBehaviour:
   bulletSpawn: {fileID: 69256424}
   bulletSpeed: 30
   lifeSpan: 3
+  buttonTrigger: Fire1
 --- !u!1 &512966857
 GameObject:
   m_ObjectHideFlags: 0
