@@ -6,6 +6,7 @@ public class ThirdPersonCameraController : MonoBehaviour
 {
     public float sensitivity = 1f;
     public Transform target, player;
+    public Transform playerWeapon;
     float mouseX, mouseY;
 
     Transform obstruction;
@@ -42,6 +43,7 @@ public class ThirdPersonCameraController : MonoBehaviour
         {
             target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
             player.rotation = Quaternion.Euler(0, mouseX, 0);
+            playerWeapon.rotation = Quaternion.Euler(mouseY + 90, mouseX, 0);
         }
     }
 
