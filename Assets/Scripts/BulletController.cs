@@ -8,5 +8,11 @@ public class BulletController : MonoBehaviour
     {
         print("Hit " + other.name + "!");
         Destroy(gameObject);
+
+        if (other.tag == "Enemy")
+        {
+            Destroy(other.gameObject);
+            print("Destroyed!");
+        }
     }
 }
