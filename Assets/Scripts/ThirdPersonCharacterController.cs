@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ThirdPersonCharacterController : MonoBehaviour
 {
-    public float Speed = 10;
-    public float JumpForce = 7;
-    public LayerMask GroundLayers;
+    public float speed = 10;
+    public float jumpForce = 7;
+    public LayerMask groundLayers;
 
     Rigidbody rb;
     CapsuleCollider col;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame updates
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -30,12 +30,12 @@ public class ThirdPersonCharacterController : MonoBehaviour
         float hor = Input.GetAxis("Horizontal");
         float ver = Input.GetAxis("Vertical");
 
-        Vector3 playerMovement = new Vector3(hor, 0f, ver) * Speed * Time.deltaTime;
+        Vector3 playerMovement = new Vector3(hor, 0f, ver) * speed * Time.deltaTime;
         transform.Translate(playerMovement, Space.Self);
 
         if (IsGrounded() && Input.GetButtonDown("Jump"))
         {
-            rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 
@@ -46,7 +46,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
             col.bounds.center,
             new Vector3(col.bounds.center.x, col.bounds.min.y, col.bounds.center.z),
             col.radius * 0.9f,
-            GroundLayers
+            groundLayers
         );
     }
 }
