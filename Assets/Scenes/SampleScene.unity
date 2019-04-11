@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 494632174}
   - component: {fileID: 494632173}
   - component: {fileID: 494632178}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -337,6 +337,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
+  JumpForce: 7
+  GroundLayers:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &512966857
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +355,7 @@ GameObject:
   - component: {fileID: 512966859}
   m_Layer: 0
   m_Name: Face
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
