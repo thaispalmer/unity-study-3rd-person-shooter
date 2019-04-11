@@ -35,11 +35,10 @@ public class PlayerWeaponController : MonoBehaviour
 
         bullet.transform.position = bulletSpawn.position;
 
-        Vector3 rotation = bullet.transform.rotation.eulerAngles;
         bullet.transform.rotation = Quaternion.Euler(
-            rotation.x,
-            transform.eulerAngles.y,
-            rotation.z
+            bulletSpawn.eulerAngles.x + 90,
+            bulletSpawn.eulerAngles.y,
+            bulletSpawn.eulerAngles.z
         );
 
         bullet.GetComponent<Rigidbody>().AddForce(
