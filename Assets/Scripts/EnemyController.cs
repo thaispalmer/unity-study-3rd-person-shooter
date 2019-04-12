@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public float searchRadius = 10f;
+    public int damage = 40;
 
     Transform target;
     NavMeshAgent agent;

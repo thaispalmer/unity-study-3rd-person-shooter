@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 494632173}
   - component: {fileID: 494632178}
   - component: {fileID: 494632180}
+  - component: {fileID: 494632181}
   - component: {fileID: 494632179}
   m_Layer: 9
   m_Name: Player
@@ -542,6 +543,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e8ae3488f753445a8d0891c1479de7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &494632181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494632172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47beb316255b2374da5c9e3683682110, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarPrefab: {fileID: 0}
+  healthBarYOffset: 2
+  currentHealth: 100
+  maxHealth: 100
 --- !u!1 &512966857
 GameObject:
   m_ObjectHideFlags: 0

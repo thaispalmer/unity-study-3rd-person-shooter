@@ -15,14 +15,20 @@ public class HealthController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        healthBar = Instantiate(healthBarPrefab);
-        UpdateBar();
+        if (healthBarPrefab)
+        {
+            healthBar = Instantiate(healthBarPrefab);
+            UpdateBar();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        PositionHealthBar();
+        if (healthBarPrefab)
+        {
+            PositionHealthBar();
+        }
     }
 
     // Update instantiated health bar position based on the current game object
@@ -42,10 +48,13 @@ public class HealthController : MonoBehaviour
     // Update slider value
     private void UpdateBar()
     {
-        Transform panel = healthBar.transform.Find("Panel");
-        Transform slider = panel.transform.Find("Slider");
-        Slider sliderComponent = slider.GetComponent<Slider>();
-        sliderComponent.value = currentHealth / maxHealth;
+        if (healthBarPrefab)
+        {
+            Transform panel = healthBar.transform.Find("Panel");
+            Transform slider = panel.transform.Find("Slider");
+            Slider sliderComponent = slider.GetComponent<Slider>();
+            sliderComponent.value = currentHealth / maxHealth;
+        }
     }
 
     // Destroy the instantiated health bar game object
