@@ -11,6 +11,16 @@ public class BulletController : MonoBehaviour
 
         if (other.tag == "Enemy")
         {
+            HealthController healthController = other.gameObject.GetComponent<HealthController>();
+            if (healthController)
+            {
+                healthController.Damage(10);
+                if (healthController.currentHealth > 0)
+                {
+                    return;
+                }
+                healthController.Destroy();
+            }
             Destroy(other.gameObject);
             print("Destroyed!");
         }
